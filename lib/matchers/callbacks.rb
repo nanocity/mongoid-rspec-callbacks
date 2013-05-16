@@ -9,12 +9,17 @@ module Mongoid
 
       def matches?( klass )
         return false unless @kind
+        return false if @no_op = !klass.class.respond_to?( :"_#{@operation}_callbacks" )
 
+        @guess = nil
         @methods.each do |method|
-          filters = klass.class.send( "_#{@operation}_callbacks".to_sym ).select do |c|
-            c.filter == method && c.kind == @kind && c.options[:on] == @on
+          filter = klass.class.send( :"_#{@operation}_callbacks" ).detect do |c|
+            @guess = c if c.filter == method
+
+            c.filter == method and c.kind == @kind and c.options[:on] == @on
           end
-          return false if filters.empty?
+
+          return false unless filter
         end
       end
 
@@ -48,10 +53,17 @@ module Mongoid
 
       protected
       def failure_message( should )
+        return "Invalid operation. Use :initialize, :build, :validation,"\
+               ":create, :find, :update, :upsert, :save or :destroy" if @no_op
+
         if @kind
-          msg = "Expected method#{@methods.size > 1 ? 's' : ''} #{@methods.join(", ")} #{should ? '' : 'not ' }to be called"
+          msg =  "Expected method#{@methods.size > 1 ? 's' : ''} #{@methods.join(", ")} #{should ? '' : 'not ' }to be called"
           msg << " #{@kind} #{@operation}" if @operation
           msg << " on #{@on}" if @on
+          msg << ( @guess ? ", but got method #{@guess.filter} called" : ", but no callback found" )
+          msg << " #{@guess.kind} #{@operation}" if @guess
+          msg << " on #{@guess.options[:on]}" if @guess and @guess.options[:on]
+
           msg
         else
           "Callback#{@methods.size > 1 ? 's' : '' } #{@methods.join(", ")} can"\
