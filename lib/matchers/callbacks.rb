@@ -16,7 +16,9 @@ module Mongoid
           filter = klass.class.send( :"_#{@operation}_callbacks" ).detect do |c|
             @guess = c if c.filter == method
 
-            c.filter == method and c.kind == @kind and c.options[:on] == @on
+            options = c.try(:options) || {}
+
+            c.filter == method and c.kind == @kind and options[:on] == @on
           end
 
           return false unless filter
@@ -57,12 +59,13 @@ module Mongoid
                ":create, :find, :update, :upsert, :save or :destroy" if @no_op
 
         if @kind
+          options = @guess.try(:options)
           msg =  "Expected method#{@methods.size > 1 ? 's' : ''} #{@methods.join(", ")} #{should ? '' : 'not ' }to be called"
           msg << " #{@kind} #{@operation}" if @operation
           msg << " on #{@on}" if @on
           msg << ( @guess ? ", but got method #{@guess.filter} called" : ", but no callback found" )
           msg << " #{@guess.kind} #{@operation}" if @guess
-          msg << " on #{@guess.options[:on]}" if @guess and @guess.options[:on]
+          msg << " on #{options[:on]}" if @guess and options[:on]
 
           msg
         else
