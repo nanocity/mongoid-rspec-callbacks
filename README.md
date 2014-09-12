@@ -3,7 +3,7 @@ mongoid-rspec-callbacks
 
 http://rubygems.org/gems/mongoid-rspec-callbacks
 
-RSpec Callbacks matchers for Mongoid 3.x.
+RSpec Callbacks matchers for Mongoid 4.x and Rails 4.x.
 
 This gem is meant to be use with [mongoid-rpsec](http://rubygems.org/gems/mongoid-rspec), altought it works by itself.
 
