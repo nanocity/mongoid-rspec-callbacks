@@ -1,6 +1,5 @@
 *.swp
-*.gem
-*.gemspec
-.rmvrc
+.ruby-gemset
+.ruby-version
 Gemfile.lock
 pkg/*
