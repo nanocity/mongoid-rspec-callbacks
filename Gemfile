@@ -1,6 +1,6 @@
-source "http://rubygems.org"
+# frozen_string_literal: true
 
-gem 'activesupport', '~> 4.2'
-gem 'jeweler'
-gem 'rspec'
-gem 'mongoid'
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in evostream-event.gemspec
+gemspec
