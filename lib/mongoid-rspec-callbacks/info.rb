@@ -16,7 +16,7 @@ module Mongoid
       EMAILS = ['jeremy@dazzl.tv'].freeze
 
       # Licence
-      LICENSE = 'GPLv3'
+      LICENSE = 'GPL-3.0'
 
       # Define a summary description to gem
       SUMMARY = 'RSpec Callbacks matchers for Mongoid'
