@@ -7,7 +7,8 @@ require 'mongoid-rspec-callbacks/info'
 
 Gem::Specification.new do |spec|
   spec.version = if ENV['GITHUB_REF'].eql?('refs/heads/develop')
-                   "#{Mongoid::Rspec::Callbacks::VERSION}.pre.#{ENV['GITHUB_RUN_ID']}"
+                   "#{Mongoid::Rspec::Callbacks::VERSION}." \
+                     "pre.#{ENV['GITHUB_RUN_ID']}"
                  else
                    Mongoid::Rspec::Callbacks::VERSION
                  end

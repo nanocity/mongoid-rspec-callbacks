@@ -1,0 +1,31 @@
+---
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+  TargetRubyVersion: 2.6
+  NewCops: enable
+
+### METRICS ###
+Metrics/BlockLength:
+  Exclude:
+    - mongoid-rspec-callbacks.gemspec
+
+### LAYOUTS ###
+Layout/LineLength:
+  Max: 80
+  Exclude:
+    - spec/**/*
+
+### SECURITY ###
+Security/YAMLLoad:
+  Enabled: false
+
+### STYLES ###
+Style/RescueStandardError:
+  Enabled: false

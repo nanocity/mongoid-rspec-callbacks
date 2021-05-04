@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'mongoid-rspec-callbacks'
+require 'mongoid_rspec_callbacks'
 require 'models/user'
 require 'simplecov'
 require 'simplecov_json_formatter'

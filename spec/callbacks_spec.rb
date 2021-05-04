@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
-describe "Callbacks" do
+describe 'Callbacks' do
   describe User do
     it { is_expected.to callback(:callback1).before(:save) }
     it { is_expected.to callback(:callback2).after(:save) }
