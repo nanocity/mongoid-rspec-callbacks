@@ -21,20 +21,45 @@ By now, only ``on`` option is supported.
 
 Add to your Gemfile
 
-    gem 'mongoid-rspec'
-    gem 'mongoid-rspec-callbacks'
+```
+gem 'mongoid-rspec-callbacks'
+```
 
 Drop in existing or dedicated support file in spec/support (spec/support/mongoid.rb)
 
-    RSpec.configure do |configuration|
-      configuration.include Mongoid::Matchers
-    end
+```
+RSpec.configure do |configuration|
+  configuration.include Mongoid::Matchers
+end
+```
 
 ## Callbacks Matchers
 
-    describe User do
-      it { should callback(:method).before(:save) }
-      it { should callback(:method).after(:save) }
-      it { should callback(:method, :method2).before(:validation) }
-      it { should callback(:method).after(:validation).on(:create) }
-    end
+```
+describe User do
+  it { should callback(:method).before(:save) }
+  it { should callback(:method).after(:save) }
+  it { should callback(:method, :method2).before(:validation) }
+  it { should callback(:method).after(:validation).on(:create) }
+end
+```
+
+## Set Callbacks Matchers
+
+```
+describe User do
+  it { is_expected.to set_callback(:save, :arround)  }
+  it { is_expected.to set_callback(:validation, :after)  }
+end
+```
+
+## Association Callbacks Matchers
+
+```
+describe User do
+  it { is_expected.to association_callback(:has_many,
+                                           :add,
+                                           :after,
+                                           :send_email_to_subscribers)  }
+end
+```

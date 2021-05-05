@@ -6,12 +6,10 @@ module Mongoid
     #
     # Usage:
     #
-    # describe <model> do
-    #   it { is_expected.to association_callback(:has_many,
-    #                                            :add,
-    #                                            :after,
-    #                                            :send_email_to_subscribers)  }
-    # end
+    # it { is_expected.to association_callback(:has_many,
+    #                                          :add,
+    #                                          :after,
+    #                                          :send_email_to_subscribers)  }
     class HaveAssociationCallbackMatcher
       CONTEXTS = %i[before after].freeze
       OPERATIONS = %i[add remove].freeze

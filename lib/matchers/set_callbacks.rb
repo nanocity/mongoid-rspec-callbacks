@@ -6,11 +6,9 @@ module Mongoid
     #
     # Usage:
     #
-    # describe <model> do
-    #   it { is_expected.to set_callback(:<operation>, :<context>)  }
-    #   it { is_expected.to set_callback(:save, :arround)  }
-    #   it { is_expected.to set_callback(:validation, :after)  }
-    # end
+    # it { is_expected.to set_callback(:<operation>, :<context>)  }
+    # it { is_expected.to set_callback(:save, :arround)  }
+    # it { is_expected.to set_callback(:validation, :after)  }
     class HaveSetCallbackMatcher
       CONTEXTS = %i[before arround after].freeze
       OPERATIONS = %i[initialize build validation create
