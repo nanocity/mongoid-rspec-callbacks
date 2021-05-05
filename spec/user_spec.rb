@@ -5,7 +5,7 @@ require 'spec_helper'
 describe User do
   it { is_expected.to set_callback(:initialize, :after) }
   it { is_expected.to set_callback(:build, :after) }
-  it { is_expected.to set_callback(:validation, :after) }
+  it { is_expected.to set_callback(:validation, :before) }
   it { is_expected.to set_callback(:validation, :after) }
   it { is_expected.to set_callback(:create, :before) }
   it { is_expected.to set_callback(:create, :arround) }

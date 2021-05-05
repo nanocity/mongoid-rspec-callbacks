@@ -11,6 +11,11 @@ AllCops:
   TargetRubyVersion: 2.6
   NewCops: enable
 
+### NAMINGS ###
+Naming/AccessorMethodName:
+  Exclude:
+    - lib/matchers/set_callbacks.rb
+
 ### METRICS ###
 Metrics/BlockLength:
   Exclude:
@@ -28,4 +33,7 @@ Security/YAMLLoad:
 
 ### STYLES ###
 Style/RescueStandardError:
+  Enabled: false
+
+Style/Documentation:
   Enabled: false

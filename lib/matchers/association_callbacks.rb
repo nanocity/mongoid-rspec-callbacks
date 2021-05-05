@@ -1,4 +1,4 @@
-require 'pry'
+# frozen_string_literal: true
 
 module Mongoid
   module Matchers
@@ -15,7 +15,7 @@ module Mongoid
     class HaveAssociationCallbackMatcher
       CONTEXTS = %i[before after].freeze
       OPERATIONS = %i[add remove].freeze
-      RELATIONS = %i[embeds_many has_many and has_and_belongs_to_many]
+      RELATIONS = %i[embeds_many has_many and has_and_belongs_to_many].freeze
 
       def initialize(*args)
         @relation = args[0]
@@ -67,7 +67,7 @@ module Mongoid
       end
 
       def testings_presence_method_callback
-        @model.methods.include?("#{@method}".to_sym)
+        @model.methods.include?(:"#{@method}")
       end
 
       def message_error

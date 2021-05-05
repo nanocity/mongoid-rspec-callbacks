@@ -24,4 +24,6 @@ class User
   set_callback(:destroy, :before)
   set_callback(:destroy, :arround)
   set_callback(:destroy, :after)
+
+  belongs_to :studio
 end
