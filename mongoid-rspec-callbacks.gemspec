@@ -42,4 +42,5 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'activesupport', '~> 6.1.3.1'
   spec.add_dependency 'mongoid', '~> 7.2', '>= 7.2.2'
+  spec.add_dependency 'mongoid-rspec', '~> 4.1'
 end
