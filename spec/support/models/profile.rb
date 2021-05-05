@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-class User
+class Profile
   include Mongoid::Document
-  include Mongoid::Timestamps::Created
-
-  field :login
-  field :email
+  include Mongoid::Timestamps::Short
+  include Mongoid::Attributes::Dynamic
 
   before_save :callback1
   after_save :callback2
