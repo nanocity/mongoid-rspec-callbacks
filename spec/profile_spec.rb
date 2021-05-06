@@ -3,8 +3,8 @@
 require 'spec_helper'
 
 describe Profile do
-  it { is_expected.to callback(:callback1).before(:save) }
-  it { is_expected.to callback(:callback2).after(:save) }
-  it { is_expected.to callback(:callback1, :callback2).before(:validation) }
-  it { is_expected.to callback(:callback3).after(:validation).on(:create) }
+  it { is_expected.to callback(:callback_before_save).before(:save) }
+  it { is_expected.to callback(:callback_after_save).after(:save) }
+  it { is_expected.to callback(:callback_before_validation, :callback_before_validation_x).before(:validation) }
+  it { is_expected.to callback(:callback_after_validation).after(:validation).on(:create) }
 end

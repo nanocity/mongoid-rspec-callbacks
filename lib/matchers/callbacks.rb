@@ -140,12 +140,10 @@ module Mongoid
         return true unless context
 
         options = callback.instance_variable_get(:@if)
-        @context_match = options.select do |o|
-          o.is_a?(Proc)
-        end
+        @context_match = options.select { |option| option.is_a?(Proc) }
 
-        @context_match.detect do |o|
-          o.call(ValidationContext.new(context))
+        @context_match.detect do |option|
+          option.call(ValidationContext.new(context))
         end
       end
     end

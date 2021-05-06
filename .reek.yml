@@ -1,0 +1,25 @@
+---
+
+detectors:
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+  InstanceVariableAssumption:
+    enabled: false
+
+directories:
+  "lib/mongoid-rspec-callbacks/":
+    TooManyConstants:
+      enabled: false
+  "lib/matchers/":
+    ControlParameter:
+      enabled: false
+    ManualDispatch:
+      enabled: false
+    TooManyStatements:
+      enabled: false
+    TooManyInstanceVariables:
+      enabled: false
+    TooManyMethods:
+      enabled: false
