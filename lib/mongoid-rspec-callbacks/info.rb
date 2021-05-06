@@ -7,7 +7,7 @@ module Mongoid
       VERSION = '1.0.0'
 
       # Name to gem
-      GEM_NAME = 'mongoid-rspec-callbacks'
+      GEM_NAME = 'mongoid7-rspec-callbacks'
 
       # Authors
       AUTHORS = ['VAILLANT Jeremy'].freeze
