@@ -6,7 +6,6 @@ module Mongoid
     #
     # Usage:
     #
-    # it { is_expected.to set_callback(:<operation>, :<context>)  }
     # it { is_expected.to set_callback(:save, :arround)  }
     # it { is_expected.to set_callback(:validation, :after)  }
     class HaveSetCallbackMatcher
