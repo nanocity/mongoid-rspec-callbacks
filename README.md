@@ -63,3 +63,12 @@ describe User do
                                            :send_email_to_subscribers)  }
 end
 ```
+
+## delegate Matchers
+
+```
+describe User do
+  it { is_expected.to delegate(:name).to(:author) }
+  it { is_expected.to delegate(:day).to(:created_at).with_prefix(:date) }
+end
+```
