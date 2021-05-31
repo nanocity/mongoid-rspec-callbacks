@@ -3,8 +3,8 @@
   [![Linter](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/linter.yml/badge.svg)](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/linter.yml)
   [![Gem Version](https://badge.fury.io/rb/mongoid-rspec-callbacks-dazzl.svg)](https://badge.fury.io/rb/mongoid-rspec-callbacks-dazzl)
   [![Docs](https://inch-ci.org/github/dazzl-tv/mongoid-rspec-callbacks.svg)](https://inch-ci.org/github/dazzl-tv/mongoid-rspec-callbacks)
-  [![Maintainability](https://api.codeclimate.com/v1/badges/2538546ea7419c1d5ea1/maintainability)](https://codeclimate.com/github/dazzl-tv/mongoid-rspec-callbacks/maintainability)
-  [![Test Coverage](https://api.codeclimate.com/v1/badges/2538546ea7419c1d5ea1/test_coverage)](https://codeclimate.com/github/dazzl-tv/mongoid-rspec-callbacks/test_coverage)
+  [![Maintainability](https://api.codeclimate.com/v1/badges/844252a590da9dd39c81/maintainability)](https://codeclimate.com/github/dazzl-tv/mongoid-rspec-callbacks/maintainability)
+  [![Test Coverage](https://api.codeclimate.com/v1/badges/844252a590da9dd39c81/test_coverage)](https://codeclimate.com/github/dazzl-tv/mongoid-rspec-callbacks/test_coverage)
   [![Known Vulnerabilities](https://snyk.io/test/github/dazzl-tv/mongoid-rspec-callbacks/badge.svg)](https://snyk.io/test/github/dazzl-tv/mongoid-rspec-callbacks)
 
 http://rubygems.org/gems/mongoid-rspec-callbacks
