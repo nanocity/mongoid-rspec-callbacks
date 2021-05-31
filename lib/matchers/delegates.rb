@@ -59,7 +59,6 @@ module Mongoid
     end
 
     def delegate(*args)
-      p "Args : #{args}"
       HaveDelegateMatcher.new(*args)
     end
   end

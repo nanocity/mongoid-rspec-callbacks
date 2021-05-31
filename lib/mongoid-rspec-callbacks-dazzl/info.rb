@@ -5,7 +5,7 @@ module Mongoid
     module Callbacks
       module Dazzl
         # Define version to gem
-        VERSION = '1.0.0'
+        VERSION = '1.0.1'
 
         # Name to gem
         GEM_NAME = 'mongoid-rspec-callbacks-dazzl'
