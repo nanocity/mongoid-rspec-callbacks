@@ -16,19 +16,20 @@ jobs:
       matrix:
         ruby-version: ['2.6', '2.7', '3.0']
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true
-    - name: Run tests
-      run: |
-        bundle exec rake
-    - name: Publish code coverage
-      uses: paambaati/codeclimate-action@v2.7.5
-      env:
-        CC_TEST_REPORTER_ID: "${{secrets.CC_TEST_REPORTER_ID}}"
-      with:
-        coverageLocations: |
-          ${{github.workspace}}/coverage/coverage.json:simplecov
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: false
+      - run: bundle install
+      - name: Run tests
+        run: |
+          bundle exec rake
+      - name: Publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: "${{secrets.CC_TEST_REPORTER_ID}}"
+        with:
+          coverageLocations: |
+            ${{github.workspace}}/coverage/coverage.json:simplecov
