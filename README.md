@@ -1,7 +1,7 @@
 # Mongoid::Rspec::Callbacks
-  [![RSpec](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/rspec.yml/badge.svg?branch=develop&event=pull_request)](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/rspec.yml)
+  [![RSpec](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/rspec.yml/badge.svg)](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/rspec.yml)
   [![Linter](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/linter.yml/badge.svg)](https://github.com/dazzl-tv/mongoid-rspec-callbacks/actions/workflows/linter.yml)
-  [![Gem Version](https://badge.fury.io/rb/mongoid-rspec-callbacks.svg)](https://badge.fury.io/rb/mongoid-rspec-callbacks)
+  [![Gem Version](https://badge.fury.io/rb/mongoid-rspec-callbacks-dazzl.svg)](https://badge.fury.io/rb/mongoid-rspec-callbacks-dazzl)
   [![Docs](https://inch-ci.org/github/dazzl-tv/mongoid-rspec-callbacks.svg)](https://inch-ci.org/github/dazzl-tv/mongoid-rspec-callbacks)
   [![Maintainability](https://api.codeclimate.com/v1/badges/2538546ea7419c1d5ea1/maintainability)](https://codeclimate.com/github/dazzl-tv/mongoid-rspec-callbacks/maintainability)
   [![Test Coverage](https://api.codeclimate.com/v1/badges/2538546ea7419c1d5ea1/test_coverage)](https://codeclimate.com/github/dazzl-tv/mongoid-rspec-callbacks/test_coverage)
