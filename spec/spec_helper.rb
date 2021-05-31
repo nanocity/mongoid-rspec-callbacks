@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'mongoid_rspec_callbacks'
+require 'mongoid_rspec_callbacks_dazzl'
 require 'simplecov'
 require 'simplecov_json_formatter'
 
@@ -20,5 +20,6 @@ RSpec.configure do |config|
   # Exclude spec broken
   config.filter_run_excluding broken: true
 
+  # Include matchers
   config.include Mongoid::Matchers
 end

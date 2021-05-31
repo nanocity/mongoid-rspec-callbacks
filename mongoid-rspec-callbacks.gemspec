@@ -3,24 +3,24 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'mongoid-rspec-callbacks/info'
+require 'mongoid-rspec-callbacks-dazzl/info'
 
 Gem::Specification.new do |spec|
   spec.version = if ENV['GITHUB_REF'].eql?('refs/heads/develop')
-                   "#{Mongoid::Rspec::Callbacks::VERSION}." \
+                   "#{Mongoid::Rspec::Callbacks::Dazzl::VERSION}." \
                      "pre.#{ENV['GITHUB_RUN_ID']}"
                  else
-                   Mongoid::Rspec::Callbacks::VERSION
+                   Mongoid::Rspec::Callbacks::Dazzl::VERSION
                  end
-  spec.name         = Mongoid::Rspec::Callbacks::GEM_NAME
-  spec.authors      = Mongoid::Rspec::Callbacks::AUTHORS
-  spec.email        = Mongoid::Rspec::Callbacks::EMAILS
+  spec.name         = Mongoid::Rspec::Callbacks::Dazzl::GEM_NAME
+  spec.authors      = Mongoid::Rspec::Callbacks::Dazzl::AUTHORS
+  spec.email        = Mongoid::Rspec::Callbacks::Dazzl::EMAILS
 
-  spec.summary      = Mongoid::Rspec::Callbacks::SUMMARY
-  spec.description  = Mongoid::Rspec::Callbacks::DESCRIPTION
+  spec.summary      = Mongoid::Rspec::Callbacks::Dazzl::SUMMARY
+  spec.description  = Mongoid::Rspec::Callbacks::Dazzl::DESCRIPTION
 
-  spec.homepage     = Mongoid::Rspec::Callbacks::HOMEPAGE
-  spec.license      = Mongoid::Rspec::Callbacks::LICENSE
+  spec.homepage     = Mongoid::Rspec::Callbacks::Dazzl::HOMEPAGE
+  spec.license      = Mongoid::Rspec::Callbacks::Dazzl::LICENSE
 
   spec.files        = ['Gemfile', 'LICENSE', 'Rakefile', 'README.md', 'COPYING']
   spec.files        += Dir['lib/**/*']
