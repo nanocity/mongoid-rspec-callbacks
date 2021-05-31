@@ -10,6 +10,8 @@ class Studio
     after_remove: :send_email_to_unsubscribers
   }
 
+  delegate :leader, to: :band
+
   def send_notification_subscribers
     true
   end

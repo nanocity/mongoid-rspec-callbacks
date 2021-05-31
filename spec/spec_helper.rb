@@ -15,7 +15,7 @@ end
 
 RSpec.configure do |config|
   # Stop when rspec fail
-  config.fail_fast = false
+  config.fail_fast = true
 
   # Exclude spec broken
   config.filter_run_excluding broken: true

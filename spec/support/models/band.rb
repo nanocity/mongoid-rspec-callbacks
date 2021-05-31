@@ -8,6 +8,9 @@ class Band
     after_add: :send_email_to_subscribers
   }
 
+  has_many :members
+  has_one :leader, class_name: 'Musician'
+
   def send_email_to_subscribers
     true
   end
