@@ -3,8 +3,10 @@
 name: RSpec
 
 on:
-  pull_request:
+  push:
     branches:
+      - bugfix/*
+      - master
       - develop
 
 jobs:
