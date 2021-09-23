@@ -6,12 +6,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'mongoid-rspec-callbacks-dazzl/info'
 
 Gem::Specification.new do |spec|
-  spec.version = if ENV['GITHUB_REF'].eql?('refs/heads/develop')
-                   "#{Mongoid::Rspec::Callbacks::Dazzl::VERSION}." \
-                     "pre.#{ENV['GITHUB_RUN_ID']}"
-                 else
-                   Mongoid::Rspec::Callbacks::Dazzl::VERSION
-                 end
+  version = Mongoid::Rspec::Callbacks::Dazzl::VERSION
+  spec.version      = if ENV.key?('GITHUB_RUN_ID') &&
+                         !ENV['GITHUB_REF'].eql?('refs/heads/master')
+                        "#{version}.pre.#{ENV['GITHUB_RUN_ID']}"
+                      else
+                        version
+                      end
   spec.name         = Mongoid::Rspec::Callbacks::Dazzl::GEM_NAME
   spec.authors      = Mongoid::Rspec::Callbacks::Dazzl::AUTHORS
   spec.email        = Mongoid::Rspec::Callbacks::Dazzl::EMAILS
